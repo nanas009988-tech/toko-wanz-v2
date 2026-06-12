@@ -699,7 +699,7 @@ if (method === "DANA") {
 }
 
 card.innerHTML = `
-    <img src="${logo}" class="payment-logo ${method.toLowerCase()}">
+    <img src="${logo}" class="payment-logo">
     <span>${method}</span>
 `;
 
