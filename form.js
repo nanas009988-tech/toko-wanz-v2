@@ -691,11 +691,11 @@ function renderPayments() {
         let logo = "";
 
 if (method === "DANA") {
-    logo = "assets/payment/dana.jpeg";
+    logo = "assets/payment/dana.png";
 } else if (method === "OVO") {
-    logo = "assets/payment/ovo.jpeg";
+    logo = "assets/payment/ovo.png";
 } else if (method === "GOPAY") {
-    logo = "assets/payment/gopay.jpeg";
+    logo = "assets/payment/gopay.png";
 }
 
 card.innerHTML = `
