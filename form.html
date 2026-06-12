@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <title>TopUpCode - Form Top Up Game</title>
+    <meta name="description" content="TopUp game cepat, aman, murah, dan terpercaya di TopUpCode.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+    <div id="app">
+
+        <main class="topup-page">
+
+            <div class="container">
+
+                <!-- =====================================
+                     GAME BANNER
+                ====================================== -->
+                <section class="game-banner" aria-label="Informasi Game">
+
+                    <figure class="game-banner-image">
+                        <img
+                            id="game-image"
+                            src="assets/default-game.webp"
+                            alt="Banner Game">
+                    </figure>
+
+                    <div class="game-banner-content">
+
+                        <h1 id="game-name" class="game-name">
+                            Nama Game
+                        </h1>
+
+                        <span class="security-badge">
+                            Pembayaran Aman &amp; Terverifikasi
+                        </span>
+
+                    </div>
+
+                </section>
+
+                <!-- =====================================
+                     TOPUP FORM
+                ====================================== -->
+                <form id="topup-form" class="topup-form">
+
+                    <!-- =====================================
+                         STEP 1
+                    ====================================== -->
+<section
+    class="form-section"
+    aria-labelledby="step-user-id">
+
+    <header class="section-header">
+        <h2 id="step-user-id">
+            Masukan Data
+        </h2>
+    </header>
+
+    <div class="section-body">
+
+        <div class="user-id-wrapper">
+
+            <div class="user-id-group">
+                <label for="user-id">
+                    ID
+                </label>
+
+                <input
+                    type="text"
+                    id="user-id"
+                    name="userId"
+                    placeholder="Masukkan User ID">
+            </div>
+
+            <div
+                id="zone-wrapper"
+                class="zone-id-group">
+
+                <label for="server-id">
+                    Zone ID
+                </label>
+
+                <input
+                    type="text"
+                    id="server-id"
+                    name="serverId"
+                    placeholder="Zone ID">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+                    <!-- =====================================
+                         STEP 2
+                    ====================================== -->
+                    <section
+                        class="form-section"
+                        aria-labelledby="step-nominal">
+
+                        <header class="section-header">
+                            <h2 id="step-nominal">
+                                Pilih Nominal
+                            </h2>
+                        </header>
+
+                        <div
+                            id="nominal-grid"
+                            class="nominal-grid">
+
+                            <!-- Nominal akan diisi oleh form.js -->
+
+                        </div>
+
+                    </section>
+
+                    <!-- =====================================
+                         STEP 3
+                    ====================================== -->
+                    <section
+                        class="form-section"
+                        aria-labelledby="step-payment">
+
+                        <header class="section-header">
+                            <h2 id="step-payment">
+                                Metode Pembayaran
+                            </h2>
+                        </header>
+
+                        <div
+                            id="payment-grid"
+                            class="payment-grid">
+
+                            <!-- Metode pembayaran akan diisi oleh form.js -->
+
+                        </div>
+
+                    </section>
+
+                    <!-- =====================================
+                         RINGKASAN PESANAN
+                    ====================================== -->
+                    <section
+                        class="order-summary"
+                        aria-labelledby="summary-title">
+
+                        <header class="section-header">
+                            <h2 id="summary-title">
+                                Ringkasan Pesanan
+                            </h2>
+                        </header>
+
+                        <div class="summary-content">
+
+                            <div class="summary-row">
+                                <span>Game</span>
+                                <strong id="summary-game">-</strong>
+                            </div>
+
+                            <div class="summary-row">
+                                <span>User ID</span>
+                                <strong id="summary-user">-</strong>
+                            </div>
+
+                            <div class="summary-row">
+                                <span>Nominal</span>
+                                <strong id="summary-nominal">-</strong>
+                            </div>
+
+                            <div class="summary-row">
+                                <span>Metode Pembayaran</span>
+                                <strong id="summary-payment">-</strong>
+                            </div>
+
+                            <div class="summary-row summary-total">
+                                <span>Total Pembayaran</span>
+                                <strong id="summary-total">Rp0</strong>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- =====================================
+                         CHECKOUT BUTTON
+                    ====================================== -->
+                    <section
+                        class="checkout-section"
+                        aria-label="Checkout">
+
+                        <button
+                            type="submit"
+                            id="buy-button"
+                            class="buy-button">
+
+                            Beli Sekarang
+
+                        </button>
+
+                    </section>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- =====================================
+         TOAST CONTAINER
+    ====================================== -->
+    <div
+        id="toast-container"
+        class="toast-container"
+        aria-live="polite"
+        aria-atomic="true">
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="form.js"></script>
+
+</body>
+</html>

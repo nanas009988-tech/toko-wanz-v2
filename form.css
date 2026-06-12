@@ -1,0 +1,683 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #050505;
+    --bg-secondary: #0f1020;
+
+    --text-dark: #111827;
+    --text-light: #6b7280;
+
+    --white: #ffffff;
+
+    --purple: #8b5cf6;
+    --blue: #3b82f6;
+    --cyan: #22d3ee;
+
+    --border: #e5e7eb;
+
+    --radius-xl: 30px;
+    --radius-lg: 24px;
+    --radius-md: 20px;
+    --radius-sm: 16px;
+
+    --shadow-card:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    --shadow-neon:
+        0 0 20px rgba(139, 92, 246, 0.35),
+        0 0 35px rgba(59, 130, 246, 0.25);
+
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    color: var(--text-dark);
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(139, 92, 246, 0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(59, 130, 246, 0.2),
+            transparent 35%
+        ),
+        linear-gradient(
+            160deg,
+            #030303 0%,
+            #090912 40%,
+            #111827 100%
+        );
+
+    background-attachment: fixed;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+input {
+    outline: none;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 18px;
+}
+
+.topup-page {
+    padding: 20px 0 50px;
+}
+
+/* =========================================================
+   GAME BANNER
+========================================================= */
+
+.game-banner {
+    overflow: hidden;
+
+    background: var(--white);
+
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-card);
+
+    margin-bottom: 20px;
+}
+
+.game-banner-image {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    overflow: hidden;
+}
+
+.game-banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-banner-content {
+    padding: 22px;
+}
+
+.game-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.security-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 12px;
+
+    padding: 10px 14px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139, 92, 246, 0.12),
+            rgba(59, 130, 246, 0.12)
+        );
+
+    color: var(--purple);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.form-section,
+.order-summary {
+    position: relative;
+
+    background: var(--white);
+
+    border-radius: var(--radius-xl);
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    box-shadow: var(--shadow-card);
+}
+
+.section-header {
+    margin-bottom: 22px;
+}
+
+.section-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Step Circle */
+
+.form-section:nth-of-type(1) .section-header h2::before {
+    content: "1";
+}
+
+.form-section:nth-of-type(2) .section-header h2::before {
+    content: "2";
+}
+
+.form-section:nth-of-type(3) .section-header h2::before {
+    content: "3";
+}
+
+.form-section .section-header h2::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--blue)
+        );
+
+    box-shadow:
+        0 0 15px rgba(139, 92, 246, 0.45),
+        0 0 25px rgba(59, 130, 246, 0.35);
+}
+
+/* =========================================================
+   FORM INPUT
+========================================================= */
+
+.section-body {
+    display: grid;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    border-radius: 18px;
+
+    border: 2px solid var(--border);
+
+    background: #f9fafb;
+
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    border-color: var(--purple);
+
+    box-shadow:
+        0 0 0 4px rgba(139, 92, 246, 0.12);
+}
+
+/* =========================================================
+   NOMINAL GRID
+========================================================= */
+
+.nominal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.nominal-card {
+    position: relative;
+
+    cursor: pointer;
+
+    padding: 18px;
+
+    border-radius: 22px;
+
+    border: 2px solid var(--border);
+
+    background: #ffffff;
+
+    transition: var(--transition);
+}
+
+.nominal-card:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--purple);
+
+    box-shadow: var(--shadow-neon);
+}
+
+.nominal-card:active {
+    transform: scale(0.97);
+}
+
+.nominal-card input {
+    display: none;
+}
+
+.nominal-card.active,
+.nominal-card input:checked + .nominal-content {
+    border-color: var(--purple);
+}
+
+.nominal-name {
+    display: block;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    color: var(--text-dark);
+}
+
+.nominal-price {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--purple);
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* =========================================================
+   BEST SELLER BADGE
+========================================================= */
+
+.best-seller {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--blue)
+        );
+
+    color: white;
+
+    font-size: 0.7rem;
+0}
+
+/* =========================================================
+   PAYMENT GRID
+========================================================= */
+
+.payment-grid {
+    display: grid;
+    gap: 20px;00000000000000000
+}
+
+.payment-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+
+    padding: 24px;
+    min-height: 90px;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+
+    background: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.payment-card:hover {
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 15px rgba(59, 130, 246, 0.25);
+}
+
+.payment-card:active {
+    transform: scale(0.98);
+}
+
+.payment-card input {
+    display: none;
+}
+
+.payment-card span {
+    font-weight: 600;
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 16px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.summary-row span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.summary-row strong {
+    text-align: right;
+    color: var(--text-dark);
+}
+
+.summary-total {
+    margin-top: 6px;
+    border-bottom: none;
+}
+
+.summary-total strong {
+    font-size: 1.15rem;
+    color: var(--purple);
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.checkout-section {
+    margin-top: 24px;
+}
+
+.buy-button {
+    width: 100%;
+
+    border: none;
+
+    padding: 18px;
+
+    border-radius: 24px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--blue)
+        );
+
+    box-shadow:
+        0 10px 25px rgba(139, 92, 246, 0.35);
+
+    transition: var(--transition);
+}
+
+.buy-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(139, 92, 246, 0.5),
+        0 0 35px rgba(59, 130, 246, 0.35);
+}
+
+.buy-button:active {
+    transform: scale(0.97);
+}
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast-container {
+    position: fixed;
+
+    right: 16px;
+    bottom: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    z-index: 9999;
+
+    pointer-events: none;
+}
+
+.toast {
+    min-width: 260px;
+
+    padding: 16px 18px;
+
+    border-radius: 18px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139, 92, 246, 0.95),
+            rgba(59, 130, 246, 0.95)
+        );
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+
+    animation: toastIn 0.3s ease;
+}
+
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .container {
+        padding: 24px;
+    }
+
+    .game-name {
+        font-size: 1.8rem;
+    }
+
+    .nominal-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1024px) {
+
+    .game-banner-content {
+        padding: 28px;
+    }
+
+    .form-section,
+    .order-summary {
+        padding: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .nominal-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* USER ID + ZONE ID */
+
+.user-id-wrapper{
+    display:flex;
+    gap:12px;
+}
+
+.user-id-group,
+.zone-id-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.user-id-group{
+    flex:2;
+}
+
+.zone-id-group{
+    flex:1;
+}
+
+.user-id-group input,
+.zone-id-group input{
+    width:100%;
+    padding:16px 18px;
+    border:2px solid var(--border);
+    border-radius:18px;
+    background:#f9fafb;
+}
+
+.zone-id-group{
+    margin-top:8px;
+}
+
+.category-title{
+    grid-column: 1 / -1;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 24px 0 12px;
+    color: #111827;
+}
+
+.payment-logo {
+    width: 70px;
+    height: 40px;
+    object-fit: contain;
+
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px;
+
+    flex-shrink: 0;
+}
+
+.payment-card span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.header-content{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.site-logo{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+
+.site-title{
+    margin:0;
+}
+
+.site-subtitle{
+    margin-top:5px;
+}
