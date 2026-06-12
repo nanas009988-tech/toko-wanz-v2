@@ -645,15 +645,16 @@ input {
 }
 
 .payment-logo {
-    width: 70px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
-
-    background: #fff;
-    border-radius: 10px;
-    padding: 5px;
-
     flex-shrink: 0;
+}
+
+.payment-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .payment-card span {
