@@ -697,6 +697,8 @@ if (method === "DANA") {
     logo = "assets/payment/ovo.png";
 } else if (method === "GOPAY") {
     logo = "assets/payment/gopay.png";
+} else if (method === "QRIS") {
+    logo = "assets/payment/qris.png";
 }
 
 card.innerHTML = `
