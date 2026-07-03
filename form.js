@@ -786,35 +786,27 @@ function updateSummary() {
 }
 
 function handleCheckout(event) {
-
     event.preventDefault();
 
-    const userId =
-        document.getElementById("user-id")
-            .value
-            .trim();
-
-    const serverId =
-        document.getElementById("server-id")
-            .value
-            .trim();
+    const userId = document.getElementById("user-id").value.trim();
+    const serverId = document.getElementById("server-id").value.trim();
 
     if (!userId) {
         showToast("Masukkan User ID terlebih dahulu");
         return;
     }
-
     if (!selectedNominal) {
         showToast("Pilih nominal terlebih dahulu");
         return;
     }
-
     if (!selectedPayment) {
         showToast("Pilih metode pembayaran");
         return;
     }
 
-    const message = `Halo Admin TopUpCode
+    // ✅ Tambahkan tanda pemicu di awal pesan agar WA langsung balas otomatis
+    const message = `#${selectedPayment.toLowerCase()}
+Halo Admin TopUpCode
 
 🎮 Game : ${selectedGame}
 🆔 User ID : ${userId}
@@ -826,10 +818,11 @@ function handleCheckout(event) {
 Mohon diproses, terima kasih.`;
 
     window.open(
-    `https://wa.me/6288213456031?text=${encodeURIComponent(message)}`,
-    "_blank"
-);
+        `https://wa.me/6288213456031?text=${encodeURIComponent(message)}`,
+        "_blank"
+    );
 }
+
 
 function formatRupiah(number) {
     return new Intl.NumberFormat(
