@@ -296,8 +296,7 @@ const productData = {
     {
         name: "800 💎",
         price: 108053
-    },
-    {
+    }
 ],
 
     "PUBG Mobile": [
