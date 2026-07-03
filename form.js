@@ -468,7 +468,8 @@ const productData = {
 const paymentMethods = [
     "DANA",
     "OVO",
-    "GOPAY"
+    "GOPAY",
+    "QRIS"
 ];
 
 let selectedGame = "";
