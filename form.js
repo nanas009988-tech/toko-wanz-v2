@@ -805,7 +805,7 @@ function handleCheckout(event) {
     }
 
     // ✅ Tambahkan tanda pemicu di awal pesan agar WA langsung balas otomatis
-    const message = `#${selectedPayment.toLowerCase()}
+const message = `#${selectedPayment.toLowerCase()}
 Halo Admin TopUpCode
 
 🎮 Game : ${selectedGame}
@@ -817,10 +817,10 @@ Halo Admin TopUpCode
 
 Mohon diproses, terima kasih.`;
 
-    window.open(
-        `https://wa.me/6288213456031?text=${encodeURIComponent(message)}`,
-        "_blank"
-    );
+window.open(
+    `https://wa.me/6288213456031?text=${encodeURIComponent(message)}`,
+    "_blank"
+);
 }
 
 
