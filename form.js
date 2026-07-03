@@ -175,40 +175,31 @@ const productData = {
     },
     {
         name: "130 💎",
-        price: 19384
-    },
-    {
-        name: "145 💎",
-        price: 20420,
-        bestSeller: true
+        price: 18384
     },
     {
         name: "150 💎",
-        price: 21413
+        price: 20413
     },
     {
         name: "160 💎",
-        price: 23360
-    },
-    {
-        name: "170 💎",
-        price: 25307
+        price: 22360
     },
     {
         name: "190 💎",
-        price: 27252
+        price: 25252
     },
     {
         name: "200 💎",
-        price: 29200
+        price: 28200
     },
     {
-        name: "230 💎",
-        price: 33092
+        name: "210 💎",
+        price: 29092
     },
     {
-        name: "260 💎",
-        price: 36985
+        name: "250 💎",
+        price: 35985
     },
     {
         name: "280 💎",
@@ -216,43 +207,43 @@ const productData = {
     },
     {
         name: "300 💎",
-        price: 42824
+        price: 41824
     },
     {
         name: "355 💎",
-        price: 48661
+        price: 47661
     },
     {
         name: "360 💎",
-        price: 49635
+        price: 47635
     },
     {
         name: "375 💎",
-        price: 52556
+        price: 51556
     },
     {
         name: "405 💎",
-        price: 56447
+        price: 55447
     },
     {
         name: "425 💎",
-        price: 58395
+        price: 57395
     },
     {
         name: "455 💎",
-        price: 64236
+        price: 63236
     },
     {
         name: "475 💎",
-        price: 66180
+        price: 65380
     },
     {
         name: "500 💎",
-        price: 69100
+        price: 68100
     },
     {
         name: "510 💎",
-        price: 71046
+        price: 70046
     },
     {
         name: "515 💎",
@@ -272,44 +263,41 @@ const productData = {
     },
     {
         name: "600 💎",
-        price: 84674
+        price: 83674
     },
     {
         name: "635 💎",
-        price: 87590
+        price: 85590
     },
     {
         name: "645 💎",
-        price: 89537
+        price: 87537
     },
     {
         name: "655 💎",
-        price: 91484
+        price: 89484
     },
     {
         name: "720 💎",
-        price: 96225
+        price: 94225
     },
     {
         name: "725 💎",
-        price: 97294
+        price: 95294
     },
     {
         name: "740 💎",
-        price: 100615
+        price: 99615
     },
     {
         name: "770 💎",
-        price: 105107
-    },
-    {
-        name: "790 💎",
-        price: 107053
+        price: 103107
     },
     {
         name: "800 💎",
-        price: 109000
-    }
+        price: 108053
+    },
+    {
 ],
 
     "PUBG Mobile": [
