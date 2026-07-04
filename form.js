@@ -821,6 +821,7 @@ window.open(
     `https://wa.me/6288213456031?text=${encodeURIComponent(message)}`,
     "_blank"
 );
+}
 
 
 
